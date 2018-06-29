@@ -4,7 +4,7 @@
     <img src=<%=@sea.image_url%> class="img-fluid" style="width: 40vw" alt="me">
     <h2 class="text-center"><%= @sea.name %> </h2>
     <p><%= @sea.bio %></p>
-    <button class="btn btn-info" style="margin: 1em"><a href="/seas/<%=@sea.id%>/edit">Edit</a></button><button class="btn btn-info" style="margin: 1em"><a href="/seas">Back</a></button>
+    <a href="/seas/<%=@sea.id%>/edit"><button class="btn btn-info" style="margin: 1em">Edit</button></a><a href="/seas"><button class="btn btn-info" style="margin: 1em">Back</button></a>
 
     <div>
       <ul class="list-group">

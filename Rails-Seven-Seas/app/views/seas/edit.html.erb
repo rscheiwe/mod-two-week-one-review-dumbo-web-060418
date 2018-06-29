@@ -1,3 +1,5 @@
+<h1>Edit this Sea</h1>
+
 <%= form_for @sea do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
@@ -26,3 +28,25 @@
   <%=  f.submit %>
 
   <% end %>
+
+</form>
+<div class="text-center row" style="margin: 1em">
+  <div class="col-sm-1">
+    <button class="btn btn-info" style="margin: 0 auto"><a href="/seas/<%=@sea.id%>">Back</a></button>
+  </div>
+  <div class="col-sm-1">
+  <button class="btn btn-info" style="margin: 0 auto"><a class="btn-info" href="/seas">All Seas</a></button>
+  </div>
+  <div class="col-sm-9">
+  </div>
+  <div class="col-sm-1">
+<%#    <%= button_to "Delete", {:controller => :sea, :action => 'destroy', :id => @sea.id }, :method => :delete %>
+  <form action="/seas/<%=@sea.id%>" method="post" style="margin: 0 auto">
+      <input type="hidden" name="_method" value="delete">
+      <input type="hidden" name="authenticity_token">
+      <input class="btn btn-danger" type="submit" value="Delete"/>
+
+  </form>
+  </div>
+</div>
+</div>
